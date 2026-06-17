@@ -1,19 +1,15 @@
-# 🛒 Grocery Inventory Analytics: End-to-End Data Pipeline
+# 🛒 Grocery Inventory Management Analytics: End-to-End Data Analytics Pipeline
 
-## 🌟 1. Project Overview
+## ✒️ 1. Giới thiệu về tác giả 
 
-This end-to-end data analytics project simulates a real-world enterprise pipeline to optimize grocery inventory management. Leveraging a dataset from Kaggle, the project implements an automated ETL pipeline, cloud data warehousing, in-depth SQL business analysis, and interactive dashboarding to drive strategic business decisions.
+**Tên:** Nguyễn Khắc Hưng
+**Vị trí:** Data Analyst/Analytics Engineer
+**Học Vấn:** Đang theo học trương trình kỹ sư nghành Khoa Học Dữ Liệu, chuyên nghành Phân Tích Dữ Liệu trong kinh tế và tài chính, thuộc khoa Công Nghệ Thông Tin, Đại học Mỏ-Địa Chất
 
-### 🚀 Key Achievements
+## 🌟 2. Project Overview
 
-- **Automated ETL Pipeline:** Engineered a robust data ingestion, cleaning, and transformation workflow using **Python (Pandas, Scikit-Learn)**, fully automated and orchestrated via **Apache Airflow** in **Docker**.
-- **Cloud Data Warehousing:** Deployed the target database in the cloud using **Neon PostgreSQL** hosted on **AWS (Asia Pacific - Singapore)** for high availability.
-- **Advanced SQL Analytics:** Performed deep-dive SQL analysis to uncover **10 high-value business insights** regarding stock levels, warehouse performance, supplier reliability, and shelf-life expiration risks.
-- **Interactive Visualization:** Designed a comprehensive executive dashboard in **Power BI Desktop** directly connected to the Cloud DWH, with automated report updates configured via **Power BI Service**.
-
-### ⚠️ Current Limitations
-
-- The orchestration pipeline (Apache Airflow) is currently hosted locally via Docker, meaning scheduled execution relies on the host machine being active.
+Đây là dự án phân tích dữ liệu end-to-end được xây dựng sát với hệ thống phân tích dữ liệu trên thực tế doanh ngiệp nhất, thể hiện kỹ năng thực chiến doanh nghiệp của tác giả dự án. Dự án thuộc domain về
+Logistic and supply chain. dữ liệu dự án được thu thập từ trang kaggle bao gồm 989 dòng và 10 cột. Dự án tiến hành xử lý dữ liệu bằng python và tự động hóa quy trình xử lý dữ liệu hàng ngày bằng apache airflow, sau đó dữ liệu được đổ vào data warehouse xây dựng bằng postgres chạy trên aws do nền tảng neon cung cấp. Tiến hành phân tích dữ liệu bằng sql, trả lời những câu hỏi kinh doanh, đưa ra insight và recommentdations. Dựa vào những insight và recomentdation vừa phân tích bên trên xây dựng dashboard theo dõi tình hình vận hành và những vấn đề của dữ liệu bằng power bi desktop, dữ liệu được kết nối trực tiếp từ data warehouse, sau đó tự động hóa quá trình cập nhật dữ liệu lên dashboard hàng ngày thông qua power bi clode service. 
 
 ---
 
