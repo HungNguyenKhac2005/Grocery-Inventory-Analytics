@@ -76,26 +76,22 @@ ORDER BY total DESC;
 SELECT * FROM statistical_category;
 ```
 
-<details>
-  <summary><b>📊 Click to view Query Output & Visualization</b></summary>
-  <br/>
+#### 📋 Output Table:
+| `catagory` | `total` |
+| :--- | ---: |
+| **Fruits & Vegetables** | `331` |
+| **Dairy** | `180` |
+| **Grains & Pulses** | `162` |
+| **Seafood** | `90` |
+| **Oils & Fats** | `77` |
+| **Beverages** | `75` |
+| **Bakery** | `74` |
 
-  #### 📋 Output Table:
-  | `catagory` | `total` |
-  | :--- | ---: |
-  | **Fruits & Vegetables** | `331` |
-  | **Dairy** | `180` |
-  | **Grains & Pulses** | `162` |
-  | **Seafood** | `90` |
-  | **Oils & Fats** | `77` |
-  | **Beverages** | `75` |
-  | **Bakery** | `74` |
+#### 📈 Visualization:
+<p align="center">
+  <img src="pictures/Distribution by Category.png" alt="Distribution by Category" width="450" />
+</p>
 
-  #### 📈 Visualization:
-  <p align="center">
-    <img src="pictures/Distribution by Category.png" alt="Distribution by Category" width="450" />
-  </p>
-</details>
 
 
 
@@ -140,26 +136,22 @@ FROM vw_inventory_shelf_life_analysis_
 GROUP BY Warehouse_Location;
 ```
 
-<details>
-  <summary><b>📊 Click to view Query Output & Visualization</b></summary>
-  <br/>
+#### 📋 Output Table (Expiration risk statistics by Category):
+| `catagory` | `total_expiring_30_days` | `total_expiring_60_days` |
+| :--- | ---: | ---: |
+| **Bakery** | `4` | `5` |
+| **Fruits & Vegetables** | `27` | `27` |
+| **Oils & Fats** | `4` | `7` |
+| **Dairy** | `14` | `15` |
+| **Seafood** | `7` | `7` |
+| **Grains & Pulses** | `8` | `17` |
+| **Beverages** | `6` | `5` |
 
-  #### 📋 Output Table (Expiration risk statistics by Category):
-  | `catagory` | `total_expiring_30_days` | `total_expiring_60_days` |
-  | :--- | ---: | ---: |
-  | **Bakery** | `4` | `5` |
-  | **Fruits & Vegetables** | `27` | `27` |
-  | **Oils & Fats** | `4` | `7` |
-  | **Dairy** | `14` | `15` |
-  | **Seafood** | `7` | `7` |
-  | **Grains & Pulses** | `8` | `17` |
-  | **Beverages** | `6` | `5` |
+#### 📈 Visualization:
+<p align="center">
+  <img src="pictures/Products Expiring.png" alt="Products Expiring by Category" width="450" />
+</p>
 
-  #### 📈 Visualization:
-  <p align="center">
-    <img src="pictures/Products Expiring.png" alt="Products Expiring by Category" width="450" />
-  </p>
-</details>
 
 
 
@@ -197,39 +189,35 @@ SELECT * FROM supplier_status_ranking_view
 WHERE total_Discontinued_rank <= 3;
 ```
 
-<details>
-  <summary><b>📊 Click to view Query Output & Visualization</b></summary>
-  <br/>
+#### 📋 Output Table (Filter Top 3 Active suppliers):
+| `Supplier_Name` | `total_Discontinued` | `total_Active` | `total_Discontinued_rank` | `total_Active_rank` |
+| :--- | ---: | ---: | ---: | ---: |
+| **Feedfire** | `0` | `4` | `226` | `1` |
+| **Quatz** | `2` | `4` | `20` | `1` |
+| **Quinu** | `1` | `4` | `85` | `1` |
+| **Rhyloo** | `0` | `4` | `226` | `1` |
+| **Shuffledrive** | `1` | `4` | `85` | `1` |
 
-  #### 📋 Output Table (Filter Top 3 Active suppliers):
-  | `Supplier_Name` | `total_Discontinued` | `total_Active` | `total_Discontinued_rank` | `total_Active_rank` |
-  | :--- | ---: | ---: | ---: | ---: |
-  | **Feedfire** | `0` | `4` | `226` | `1` |
-  | **Quatz** | `2` | `4` | `20` | `1` |
-  | **Quinu** | `1` | `4` | `85` | `1` |
-  | **Rhyloo** | `0` | `4` | `226` | `1` |
-  | **Shuffledrive** | `1` | `4` | `85` | `1` |
+#### 📈 Visualization:
+<p align="center">
+  <img src="pictures/Total active by supplier name.png" alt="Total Active by Supplier Name" width="400" />
+</p>
 
-  #### 📈 Visualization:
-  <p align="center">
-    <img src="pictures/Total active by supplier name.png" alt="Total Active by Supplier Name" width="400" />
-  </p>
+<br/>
 
-  <br/>
+#### 📋 Output Table (Filter Top 3 Discontinued suppliers):
+| `Supplier_Name` | `total_Discontinued` | `total_Active` | `total_Discontinued_rank` | `total_Active_rank` |
+| :--- | ---: | ---: | ---: | ---: |
+| **Skipfire** | `5` | `1` | `1` | `77` |
+| **Devshare** | `4` | `1` | `2` | `77` |
+| **Eimbee** | `4` | `0` | `2` | `234` |
+| **Flipbug** | `4` | `0` | `2` | `234` |
 
-  #### 📋 Output Table (Filter Top 3 Discontinued suppliers):
-  | `Supplier_Name` | `total_Discontinued` | `total_Active` | `total_Discontinued_rank` | `total_Active_rank` |
-  | :--- | ---: | ---: | ---: | ---: |
-  | **Skipfire** | `5` | `1` | `1` | `77` |
-  | **Devshare** | `4` | `1` | `2` | `77` |
-  | **Eimbee** | `4` | `0` | `2` | `234` |
-  | **Flipbug** | `4` | `0` | `2` | `234` |
+#### 📈 Visualization:
+<p align="center">
+  <img src="pictures/total backordered by supplier name.png" alt="Total Discontinued (labeled as Backordered) by Supplier Name" width="400" />
+</p>
 
-  #### 📈 Visualization:
-  <p align="center">
-    <img src="pictures/total backordered by supplier name.png" alt="Total Discontinued (labeled as Backordered) by Supplier Name" width="400" />
-  </p>
-</details>
 
 
 
