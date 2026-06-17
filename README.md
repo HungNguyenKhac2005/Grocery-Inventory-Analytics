@@ -2,9 +2,9 @@
 
 ## ✒️ 1. Giới thiệu về tác giả 
 
-**Tên:** Nguyễn Khắc Hưng
-**Vị trí:** Data Analyst/Analytics Engineer
-**Học Vấn:** Đang theo học trương trình kỹ sư nghành Khoa Học Dữ Liệu, chuyên nghành Phân Tích Dữ Liệu trong kinh tế và tài chính, thuộc khoa Công Nghệ Thông Tin, Đại học Mỏ-Địa Chất
+**Tên:** Nguyễn Khắc Hưng  
+**Vị trí:** Data Analyst/Analytics Engineer  
+**Học Vấn:** Đang theo học trương trình kỹ sư nghành Khoa Học Dữ Liệu, chuyên nghành Phân Tích Dữ Liệu trong kinh tế và tài chính, thuộc khoa Công Nghệ Thông Tin, Đại học Mỏ-Địa Chất  
 
 ## 🌟 2. Project Overview
 
