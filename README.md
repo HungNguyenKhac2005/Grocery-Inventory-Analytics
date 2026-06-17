@@ -77,25 +77,22 @@ SELECT * FROM statistical_category;
 ```
 
 #### 📋 Output Table:
-| `catagory` | `total` |
-| :--- | ---: |
-| **Fruits & Vegetables** | `331` |
-| **Dairy** | `180` |
-| **Grains & Pulses** | `162` |
-| **Seafood** | `90` |
-| **Oils & Fats** | `77` |
-| **Beverages** | `75` |
-| **Bakery** | `74` |
+
+| `catagory`              | `total` |
+| :---------------------- | ------: |
+| **Fruits & Vegetables** |   `331` |
+| **Dairy**               |   `180` |
+| **Grains & Pulses**     |   `162` |
+| **Seafood**             |    `90` |
+| **Oils & Fats**         |    `77` |
+| **Beverages**           |    `75` |
+| **Bakery**              |    `74` |
 
 #### 📈 Visualization:
+
 <p align="center">
   <img src="pictures/Distribution by Category.png" alt="Distribution by Category" width="450" />
 </p>
-
-
-
-
-
 
 ### 6.2. Expiration Risk Analysis (Within the Next 30 and 60 Days)
 
@@ -137,25 +134,22 @@ GROUP BY Warehouse_Location;
 ```
 
 #### 📋 Output Table (Expiration risk statistics by Category):
-| `catagory` | `total_expiring_30_days` | `total_expiring_60_days` |
-| :--- | ---: | ---: |
-| **Bakery** | `4` | `5` |
-| **Fruits & Vegetables** | `27` | `27` |
-| **Oils & Fats** | `4` | `7` |
-| **Dairy** | `14` | `15` |
-| **Seafood** | `7` | `7` |
-| **Grains & Pulses** | `8` | `17` |
-| **Beverages** | `6` | `5` |
+
+| `catagory`              | `total_expiring_30_days` | `total_expiring_60_days` |
+| :---------------------- | -----------------------: | -----------------------: |
+| **Bakery**              |                      `4` |                      `5` |
+| **Fruits & Vegetables** |                     `27` |                     `27` |
+| **Oils & Fats**         |                      `4` |                      `7` |
+| **Dairy**               |                     `14` |                     `15` |
+| **Seafood**             |                      `7` |                      `7` |
+| **Grains & Pulses**     |                      `8` |                     `17` |
+| **Beverages**           |                      `6` |                      `5` |
 
 #### 📈 Visualization:
+
 <p align="center">
   <img src="pictures/Products Expiring.png" alt="Products Expiring by Category" width="450" />
 </p>
-
-
-
-
-
 
 ### 6.3. Supplier Performance Ranking
 
@@ -190,15 +184,17 @@ WHERE total_Discontinued_rank <= 3;
 ```
 
 #### 📋 Output Table (Filter Top 3 Active suppliers):
-| `Supplier_Name` | `total_Discontinued` | `total_Active` | `total_Discontinued_rank` | `total_Active_rank` |
-| :--- | ---: | ---: | ---: | ---: |
-| **Feedfire** | `0` | `4` | `226` | `1` |
-| **Quatz** | `2` | `4` | `20` | `1` |
-| **Quinu** | `1` | `4` | `85` | `1` |
-| **Rhyloo** | `0` | `4` | `226` | `1` |
-| **Shuffledrive** | `1` | `4` | `85` | `1` |
+
+| `Supplier_Name`  | `total_Discontinued` | `total_Active` | `total_Discontinued_rank` | `total_Active_rank` |
+| :--------------- | -------------------: | -------------: | ------------------------: | ------------------: |
+| **Feedfire**     |                  `0` |            `4` |                     `226` |                 `1` |
+| **Quatz**        |                  `2` |            `4` |                      `20` |                 `1` |
+| **Quinu**        |                  `1` |            `4` |                      `85` |                 `1` |
+| **Rhyloo**       |                  `0` |            `4` |                     `226` |                 `1` |
+| **Shuffledrive** |                  `1` |            `4` |                      `85` |                 `1` |
 
 #### 📈 Visualization:
+
 <p align="center">
   <img src="pictures/Total active by supplier name.png" alt="Total Active by Supplier Name" width="400" />
 </p>
@@ -206,21 +202,19 @@ WHERE total_Discontinued_rank <= 3;
 <br/>
 
 #### 📋 Output Table (Filter Top 3 Discontinued suppliers):
+
 | `Supplier_Name` | `total_Discontinued` | `total_Active` | `total_Discontinued_rank` | `total_Active_rank` |
-| :--- | ---: | ---: | ---: | ---: |
-| **Skipfire** | `5` | `1` | `1` | `77` |
-| **Devshare** | `4` | `1` | `2` | `77` |
-| **Eimbee** | `4` | `0` | `2` | `234` |
-| **Flipbug** | `4` | `0` | `2` | `234` |
+| :-------------- | -------------------: | -------------: | ------------------------: | ------------------: |
+| **Skipfire**    |                  `5` |            `1` |                       `1` |                `77` |
+| **Devshare**    |                  `4` |            `1` |                       `2` |                `77` |
+| **Eimbee**      |                  `4` |            `0` |                       `2` |               `234` |
+| **Flipbug**     |                  `4` |            `0` |                       `2` |               `234` |
 
 #### 📈 Visualization:
+
 <p align="center">
   <img src="pictures/total backordered by supplier name.png" alt="Total Discontinued (labeled as Backordered) by Supplier Name" width="400" />
 </p>
-
-
-
-
 
 ---
 
@@ -230,3 +224,19 @@ Theo những phân tích dữ liệu bên trên ta có những reacomentdations 
 
 - Trong 30 và 60 ngày tới sẽ có một số lượng hàng hóa hết hạn và trở thành rác, yêu cầu đội sale và marketing triển khai những chiến dịch quảng cáo bán hàng để bán nhứng sản phẩm này đi tránh hiện tượng hàng hóa biến thành rác và gây lỗ cho cong ty. Tập chung và ba nhóm chính là Fruits and Vegetatbles, Dairy và Grains & Pulses vì 3 nhóm này có số lượng hàng sắp hết hạn nhiều nhất trong cả 30 và 60 ngày tới.
 - Hiện tại tỷ lệ backorderd của các nhà cung cấp dang ở mức tương đối cao, có đến hơn 40% các nhà cung cấp đang ở mức backordered cao và trung bình, gần 40 % các nhà cung cấp đang ở mức bakordered thấp và chỉ có gần 20% các nhả cung cấp đang ở mức hoạt động ổn. Trong đó có tới 33 nhà cung cấp tỷ lệ backordered ở mức 100%. Yêu cầu đội ngũ purchasing chấm dứt hợp đồng và tìm nhà cung cấp mới đối với nhóm các nhà cung cấp có tỷ lệ backordered 100%. Cân nhắc tìm đối tác mới ở nhóm backordered cao. Yêu cầu nhà cung cấp gia đúng hàng đối với nhóm có tỷ lệ backorder trung bình và thấp.
+
+---
+
+## 🎬 8. Demo
+
+* **Demo tự động hóa xử lý dữ liệu bằng apache airflow:**
+
+<p align="center">
+  <img src="pictures/air flow.jpg" alt="Demo Airflow Automation" />
+</p>
+
+* **Demo tự động hóa cập nhật dữ liệu lên dashboard:**
+
+<p align="center">
+  <img src="pictures/power bi cloude service.jpg" alt="Demo Power BI Cloud Service Automation" />
+</p>
