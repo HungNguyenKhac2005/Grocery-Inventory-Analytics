@@ -199,7 +199,9 @@ FROM teen_mental_health_analysis;
 
 #### **Nhận xét & Insight (Insights)**
 
-- 
+- Quan sát từ bảng số liệu ta thấy hệ số tương quan của cả 3 biến với chỉ số lo âu đều rất thấp (gần như bằng 0, không có mối liên kết tuyến tính rõ rệt).
+- Trong 3 yếu tố kể trên, mức độ nghiện mạng xã hội (`addiction_level`) có tương quan đồng biến cao nhất (`0.031`), tiếp theo là thời gian dùng mạng xã hội hàng ngày (`0.028`). Việc thiếu ngủ (`sleep_hours`) có hệ số tương quan âm rất nhỏ (`-0.011`).
+- Nhìn chung, dù mức độ nghiện là yếu tố có tương quan lớn nhất nhưng chỉ số này vẫn quá thấp. Điều này cho thấy cả 3 biến đều không quyết định trực tiếp chỉ số lo âu của các bạn trẻ, và lo âu có thể do nhiều tác nhân tâm lý hoặc đời sống khác ngoài các biến này gây ra.
 
 ---
 
@@ -258,7 +260,9 @@ SELECT * FROM stress_analysis_by_behavior_groups;
 
 #### **Nhận xét & Insight (Insights)**
 
-- 
+- Ở nhóm dùng ít mạng xã hội, ta thấy rõ ràng hoạt động thể chất đóng vai trò như một tấm khiên bảo vệ khi chỉ số stress trung bình giảm dần từ 5.65 (tập ít) xuống 5.51 (tập trung bình) và thấp nhất là 5.26 (tập nhiều).
+- Tuy nhiên, ở hai nhóm dùng trung bình và dùng nhiều mạng xã hội, xu hướng này không còn đồng đều nữa. Nhóm dùng nhiều MXH có mức stress khá cao ở những người tập trung bình (5.96) so với tập ít (5.47) và tập nhiều (5.53).
+- Kết luận lại thì hoạt động thể chất giúp giảm stress tốt nhất khi người dùng kiểm soát được thời gian lướt mạng xã hội ở mức thấp. Nếu thời lượng dùng MXH quá nhiều thì vận động thể chất không còn duy trì được vai trò bảo vệ tinh thần một cách rõ rệt.
 
 ---
 
@@ -306,7 +310,9 @@ WHERE sleep_hours < 5
 
 #### **Nhận xét & Insight (Insights)**
 
-- 
+- Nhóm người dùng có rủi ro cao (24 học sinh lọc ra) sở hữu tỷ lệ trầm cảm đáng báo động khi có tới 11 người đã được gắn nhãn trầm cảm (`depression_label = 1`), chiếm gần một nửa nhóm.
+- Về nền tảng sử dụng, nhóm này có xu hướng sử dụng TikTok hoặc cả hai mạng xã hội (Both) chiếm số lượng áp đảo với 18/24 người, trong khi chỉ dùng Instagram có số lượng ít hơn.
+- Về thói quen trước khi ngủ, đa phần học sinh trong nhóm này sử dụng điện thoại trước khi ngủ rất nhiều (phổ biến từ 1.5 đến 3 giờ). Điều này kết hợp với thời lượng ngủ cực ít (dưới 5 tiếng) cho thấy mối liên kết rõ ràng giữa thói quen dùng màn hình muộn gây mất ngủ và ảnh hưởng xấu đến tâm lý của họ.
 
 ---
 
@@ -349,7 +355,9 @@ ORDER BY hour_daily DESC;
 
 #### **Nhận xét & Insight (Insights)**
 
-- 
+- Điểm học tập trung bình của học sinh ở các nhóm thời gian sử dụng mạng xã hội nhìn chung dao động khá ổn định từ 2.91 đến 3.06, chưa thấy có sự sụt giảm nghiêm trọng hay đột ngột nào.
+- Nhóm sử dụng nhiều nhất là 8-9 tiếng có điểm học tập thấp thứ hai (2.93), tuy nhiên nhóm dùng 7-8 tiếng lại đạt điểm trung bình cao nhất (3.06). Nhóm có điểm thấp nhất rơi vào mốc 4-5 tiếng (2.91).
+- Tóm lại, trong tập dữ liệu này chưa xuất hiện một "điểm gãy" (tipping point) rõ rệt nào mà tại đó kết quả học tập bị ảnh hưởng tiêu cực có hệ thống theo thời gian sử dụng mạng xã hội tăng lên.
 
 ---
 
@@ -404,4 +412,6 @@ WHERE depression_label = 1;
 
 #### **Nhận xét & Insight (Insights)**
 
-- 
+- Đặc điểm nhận diện nổi bật nhất của nhóm học sinh bị trầm cảm (`depression_label = 1`) là họ sử dụng mạng xã hội với thời lượng cực kỳ lớn, tất cả 31 học sinh đều dùng ít nhất từ 5.1 giờ/ngày trở lên (nhiều bạn dùng tới 7-8 giờ/ngày).
+- Đi kèm với đó, nhóm này có chỉ số căng thẳng (`stress_level`) và mức lo âu (`anxiety_level`) cực kỳ cao (tất cả đều từ 7 đến 10), đồng thời thời gian ngủ cũng rất ít (hầu hết đều dưới 6 tiếng).
+- Nhìn chung, có mối liên hệ mật thiết giữa tình trạng bị trầm cảm với thói quen dùng mạng xã hội nhiều giờ liền cũng như chỉ số stress, lo âu và thiếu ngủ trầm trọng.
